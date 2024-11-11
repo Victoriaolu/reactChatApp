@@ -1,0 +1,94 @@
+.App {
+text-align: center;
+}
+
+.navbar {
+background-color: #262359;
+display: flex;
+width: 100%;
+height: 75px;
+border-radius: 7px;
+}
+
+.logo {
+display: flex;
+width: 2%;
+height: 73px;
+}
+
+.link {
+display: flex;
+margin-left: 20%;
+}
+
+.link2 {
+color: #ffcccc;
+text-decoration: none;
+}
+
+.link3 {
+color: #ccffcc;
+text-decoration: none;
+}
+.formhold {
+display: flex;
+margin-left: 15%;
+width: 100%;
+}
+.search {
+display: flex;
+width: 100%;
+margin-top: 20px;
+margin-left: 50%;
+}
+
+.searchform {
+display: flex;
+height: 30px;
+width: 70%;
+border-radius: 8px;
+}
+
+.link4 {
+color: #ccccff;
+text-decoration: none;
+}
+
+.link1 { 
+color: white;
+text-decoration: none;
+}
+
+link1.hover {
+color: #aaaaff;
+}
+
+.submit {;
+height: 30px;
+margin-top: 4px;
+color: white;
+background-color: #999999;
+}
+
+.homelink {
+margin-right: 35px;
+margin-top: 50px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
