@@ -1,5 +1,5 @@
 import react from 'react';
-import logo from '../Pasted image.png';
+import logo from '../logochat.png';
 import { Link, Outlet } from 'react-router-dom';
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
       </div>
       <div className='formhold'>
         <form className='search'>
-          <input type='text' className='searchform' placeholder='search'></input>
+          <input type='text' className='searchform' placeholder='Search'></input>
           <button type='submit' className='submit'>Search</button>
         </form>
       </div>
