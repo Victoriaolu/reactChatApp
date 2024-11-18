@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import NavBar from './navbar2';
 import { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
@@ -29,8 +30,13 @@ const Home = () => {
   return (
         <div>
             <Navbar />
-            <div className='Homebg'>   
-              <h2 className='hdtitle'>Welcome to the Chat Application</h2>
+        <div className='bdysupport'>
+            <NavBar />
+             <div className='messagediv'>
+             <div className='Homebg'>
+              <div  className='hdcont'>   
+                <h2 className='hdtitle'>Welcome to the Chat Application</h2>
+              </div>
               <div className='messagediv'>
                 {messages.map((mes, index) => (
                   <div key={index} className='msgload'>
@@ -47,7 +53,10 @@ const Home = () => {
               <button onClick={sendMessage} className='sndbutton'> Send </button>
           </div>
         </div>
-    </div>
+       <div><p className='cpytxt'>Copyright &copy Date</p></div>
+      </div>
+   </div>
+   </div>
   );
 }
 

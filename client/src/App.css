@@ -2,12 +2,100 @@
 text-align: center;
 }
 
+.imgcontx {
+width: 1px;
+height: 20px;
+display: column;
+}
+ 
+.bdysupport {
+display: flex;
+width: 100%;
+height: 600px;
+}
+
+.bdydisplay {
+display: flex;
+}
+
+.indexpic {
+display: flex;
+margin-left: 20px;
+margin-top: 40px;
+height: 600px;
+width: 45%;
+opacity: 0.80;
+}
+
+.indextext {
+margin: auto;
+margin-top: 60px;
+background-color: #cfb8cf;
+border-radius: 30px;
+height:180px;
+width: 90%;
+opacity: 0.56;
+}
+
+.linkButton {
+margin-top: 75px;
+height: 50px;
+width: 100px;
+font-size: 20px;
+color: #302080;
+border-radius: 19px;
+opacity: 0.76;
+}
+
+.ptxtindex {
+font-size: 30px;
+padding: 10px;
+color: #501070;
+}
+
+.imgdiv {
+border-top-right-radius: 35px;
+border-bottom-left-radius: 65px;
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.navbar2 {
+display: flex;
+margin-top:0px;
+margin-left: 0px;
+height: 800px;
+background-color: #452580;
+width: 75px;
+}
+
+.indexhd {
+margin-top: 20px;
+font-size: 50px;
+color: #201070;
+}
+
+
+.indexdiv {
+margin: auto;
+margin-top: 25px;
+height: 200px;
+display: column
+}
+
 .navbar {
 background-color: #452580;
 display: flex;
 width: 100%;
 height: 75px;
 border-radius: 7px;
+}
+
+.logo2 {
+display: column;
+hwight: 73px;
+width: 10%;
+margin-left: 35%;
 }
 
 .logo {
@@ -24,6 +112,59 @@ margin-top: 40px;
 border-radius: 25px;
 background-color: #251550;
 border: none;
+display: column;
+}
+
+.logindiv {
+height: 450px;
+width: 55%;
+margin: auto;
+margin-top: 40px;
+border-radius: 25px;
+background-color: #452580;
+border: none;
+display: column;
+}
+
+.textarea {
+height: 60px;
+width: 400px;
+margin-top: 10px;
+border-radius: 6px;
+border: none;
+padding: 5px;
+margin-left: 260px;
+display: flex;
+text-align: center;
+}
+
+.regdiv {
+margin: auto;
+height: 650px;
+width: 60%;
+margin-top: 40px;
+border-radius: 25px;
+background-color: #452580;
+border: none;
+display: column;
+}
+
+.labeltxt {
+margin-top: 40px;
+color: #cfb8cf;
+padding: 4px;
+text-size: 27px;
+font-size: 22px;
+font-weight: bold;
+}
+
+.formdivtxt {
+margin-top: 30px;
+}
+.hdlogin {
+color: #cfb8cf;
+text-size: 50px;
+font-size: 45px;
 }
 
 .msgload {
@@ -48,6 +189,10 @@ border-radius: 9px;
 padding: 11px;
 }
 
+.pagecont {
+width: 100%
+}
+
 .hdtitle {
 color: #802080;
 border: none;
@@ -64,6 +209,11 @@ opacity: 0.6;
 border-radius: 30px;
 }
 
+.indexlink {
+display: flex;
+margin-left: 85%;
+}
+
 .link {
 display: flex;
 margin-left: 20%;
@@ -71,6 +221,11 @@ margin-left: 20%;
 
 .link2 {
 color: #ffcccc;
+text-decoration: none;
+}
+
+a {
+color: #ccffcc;
 text-decoration: none;
 }
 
@@ -90,6 +245,14 @@ display: flex;
 width: 100%;
 margin-top: 20px;
 margin-left: 50%;
+}
+
+.cpytxt {
+color: #cfb8cf;
+}
+
+.hdcont {
+padding: 2px;
 }
 
 .searchform {
@@ -116,7 +279,7 @@ link1.hover {
 color: #aaaaff;
 }
 
-.submit {;
+.submit {
 height: 35px;
 width: 15%;
 opacity: 0.9;
@@ -142,6 +305,27 @@ margin-right: 35px;
 margin-top: 50px;
 }
 
+.loginform {
+height: 35px;
+width: 40%;
+margin: auto;
+paddiing: 5px;
+display: flex;
+border: none;
+margin-top: 10px;
+border-radius: 7px;
+text-align: center;
+}
+
+.loginbutton {
+margin-top: 40px;
+margin-left: 250px;
+height: 40px;
+width: 10%;
+background-color: #cfb8cf;
+border: none;
+border-radius: 9px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

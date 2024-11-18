@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
+import IndexNav from './indexNav';
 
 const Login = () => {
     const [formData, setFormData] = useState({ username: '', password: '' });
@@ -17,15 +17,26 @@ const Login = () => {
 
     return (
         <div>
-          <Navbar />
+          <IndexNav />
+          <div className='bdysupport'>
+          <div className='logindiv'>
           <form onSubmit={handleSubmit}>
-              <h2>Login</h2>
-              <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
-              <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-              <button type="submit">Login</button>
+              <h2 className='hdlogin'>Login</h2>
+              <div className='formdivtxt'>
+              <label for='loginuser' className='labeltxt'>Username</label>
+              <input type="text" id='loginuser' name="username" placeholder="Email" onChange={handleChange} className='loginform' required />
+              </div>
+              <div className='formdivtxt'>
+              <label for='loginpass' className='labeltxt'>Password</label>
+              <input type="password" id='loginpass' name="password" placeholder="Password" onChange={handleChange} className='loginform' required />
+              </div>
+              <button type="submit" className='loginbutton'>Login</button>
           </form>
+        <p className='cpytxt'> Please click on <a href='/register'>Register</a> to register</p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Login;

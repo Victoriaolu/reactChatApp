@@ -1,9 +1,10 @@
-import react from 'react';
+import React from 'react';
 import logo from '../logochat.png';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return(
+    <div>
     <div className='navbar'>
       <div className='logo'>
         <img src={logo} alt='img' />
@@ -16,18 +17,13 @@ const Navbar = () => {
       </div>
       <div className='link'>
           <div className='homelink'>
-            <Link to='/' className='link1'>Home</Link>
-          </div>
-          <div className='homelink'>
-            <Link to='/login' className='link2'>Login</Link>
-          </div>
-          <div className='homelink'>
-            <Link to='/register' className='link3'>Register</Link>
+            <Link to='/home' className='link1'>Home</Link>
           </div>
           <div className='homelink'>
              <Link to='/profile'className='link4'>Profile</Link>
           </div>
       </div>
+    </div>
     </div>
   );
 };

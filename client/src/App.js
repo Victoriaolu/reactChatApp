@@ -5,7 +5,7 @@ import Registration from './components/Registration';
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
-import Navbar from './components/Navbar';
+import IndexPage from './components/IndexPage';
 import './App.css';
 
 const socket = io('https://localhost:5000');
@@ -16,7 +16,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path='/' element={<IndexPage />} />
+          <Route path='/home' element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/profile" element={<Profile user={{ bio: "This is my bio." }} />} />
