@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 
 const Profile = ({ user }) => {
-    const [bio, setBio] = useState(user.bio);
+    const [bio, setBio] = useState(nulls);
 
     const handleBioChange = (e) => {
         setBio(e.target.value);

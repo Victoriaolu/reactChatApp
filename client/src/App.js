@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import io from 'socket.io-client';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Registration from './components/Registration';
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import IndexPage from './components/IndexPage';
 import './App.css';
-
-const socket = io('https://localhost:5000');
+import { Toaster } from 'react-hot-toast';
+import { useAuthContext } from './components/AuthContext';
 
 function App() {
-
+ const { authUser } = useAuthContext();
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path='/' element={<IndexPage />} />
-          <Route path='/home' element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="/profile" element={<Profile user={{ bio: "This is my bio." }} />} />
-        </Routes>
-      </div>
-    </Router>
+     <div className="App">
+            <Routes>
+              <Route path='/' element={<IndexPage />} />
+              <Route path='/register' element={<Registration />} />
+              <Route path='/login' element={authUser ? <Navigate to='/home' /> : <Login />} />
+              <Route path='/home' element={<Home />} />
+              <Route path="/profile" element={<Profile />} />
+          </Routes>
+     <Toaster />
+    </div>
   );
 }
 

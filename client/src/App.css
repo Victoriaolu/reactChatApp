@@ -7,6 +7,18 @@ width: 1px;
 height: 20px;
 display: column;
 }
+
+.iconbuttom {
+font-size: 10en;
+border: 0;
+padding: 0;
+background: none;
+}
+
+.logoutpics {
+height: 70px;
+border-radius: 20px;
+}
  
 .bdysupport {
 display: flex;

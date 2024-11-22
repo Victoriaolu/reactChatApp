@@ -2,9 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import NavBar from './navbar2';
 import { useState, useEffect } from 'react';
-import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
 
 
 const Home = () => {
@@ -13,25 +11,17 @@ const Home = () => {
   const [currentMessage, setCurrentMessage] = useState('');
 
   // Function that handles sending message
-  const sendMessage = () => {
-    if (currentMessage) {
-      socket.emit('message', currentMessage);
-      setCurrentMessage('');
-    }
-  };
-
-  useEffect(() => {
-    // listen for incoming message
-    socket.on('message', (message) => {
-      setMessages((prevMessages) => [...prevMessages, message]);
-    });
-  });
+  
+  useEffect(() => {});
   
   return (
         <div>
             <Navbar />
         <div className='bdysupport'>
             <NavBar />
+             <div className='Online'>
+
+             </div>
              <div className='messagediv'>
              <div className='Homebg'>
               <div  className='hdcont'>   
@@ -50,7 +40,7 @@ const Home = () => {
               placeholder='Type a message'
               value={currentMessage} 
               onChange={(e) => {setCurrentMessage(e.target.value)}} />
-              <button onClick={sendMessage} className='sndbutton'> Send </button>
+              <button  className='sndbutton'> Send </button>
           </div>
         </div>
        <div><p className='cpytxt'>Copyright &copy Date</p></div>
