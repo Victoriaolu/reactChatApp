@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const http = require('http');
 const cors = require('cors');
-//const socketIo = require('socket.io');
 const authRoutes = require('./routes/auth'); // Ensure this route file exists
 const userRoutes = require('./routes/user'); // User-related routes
 const messageRoutes = require('./routes/messages');
@@ -44,7 +43,7 @@ const server = http.createServer(app);
 //});
 
 // Connect to MongoDB (replace with your connection string)
-mongoose.connect('mongodb+srv://vicky1:Oluchi12@cluster0.z4wra.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://harryjohnwhye:johnharry88@cluster0.frg2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
    .then(() => {
        console.log('MongoDB connected');
    })
