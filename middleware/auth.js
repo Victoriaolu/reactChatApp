@@ -19,7 +19,7 @@ const Auth = async(req, res, next) => {
     }
     next();
     } catch (err) {
-      console.log(err);
+      console.log(`Error in Middleware ${err}`);
       res.status(401).json({ msg: 'Token is not valid' });
     }
 };

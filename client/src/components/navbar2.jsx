@@ -1,7 +1,6 @@
 import React from 'react';
-import logout from '../logout.png';
 import LogOut from './logOut';
-
+import { CiLogout } from "react-icons/ci";
 
 const NavBar = () => {
   const { logoutfxn } = LogOut()
@@ -15,13 +14,14 @@ const NavBar = () => {
      <div className='navbar2'>
        <div className='imgcontx'>
           <div className='navbuttom'>
-            <div className='logoutpic'>
+            <div className='logoutpics'>
+               <p>pics</p>        
             </div>
          </div>
           <div className='navbuttom'>
-          <buttom onClick={handleLogout} className='iconbuttom'>
-            <img src={logout} alt='img' aria-label='logout' className='logoutpics' />
-          </buttom>
+          <div onClick={handleLogout} className='iconbuttom'>
+            < CiLogout className='imgcontx' />
+          </div>
           </div>
        </div>
     </div>

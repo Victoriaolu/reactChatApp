@@ -18,6 +18,7 @@ app.use(express.static('client/build'));
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes); // Add user routes to handle bios and other user-related actions
 app.use('/api/chat', messageRoutes);
+app.use(express.static('uploads'));
 
 // Create HTTP server and Socket.IO instance
 const server = http.createServer(app);

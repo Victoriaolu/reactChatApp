@@ -41,7 +41,8 @@ return (
             <label htmlFor='bio' className='labeltxt'>Biography</label>
             <textarea name="bio" id='bio' className='textarea' placeholder="Add a short bio..." onChange={handleChange}></textarea>
             </div>
-            <button type="submit" className='loginbutton'>Register</button>
+            <button type="submit" className='loginbutton' disabled={loading}>
+               {loading ? <div className='loader'></div> : "Register"}</button>
         </form>
        </div>
       </div>

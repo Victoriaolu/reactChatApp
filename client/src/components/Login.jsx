@@ -11,7 +11,7 @@ const Login = () => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
   };
-  const { logger } = LoggerAction()
+  const { logger, loading } = LoggerAction()
   const handleSubmit = async(e) => {
     e.preventDefault();
     await logger(loginData);
@@ -32,7 +32,8 @@ const Login = () => {
                    <label htmlFor='loginpass' className='labeltxt'>Password</label>
                    <input type="password" id='loginpass' name="password" placeholder="Password" onChange={handleChange} className='loginform' required />
                  </div>
-                 <button type="submit" className='loginbutton'>Login</button>
+                 <button type="submit" className='loginbutton' disabled={loading}>
+                   {loading ? <div className='loader'></div> : "Log In"}</button>
               </form>
              <p className='cpytxt'> Please click on <Link to='/register'>Register</Link> to register</p>
         </div>

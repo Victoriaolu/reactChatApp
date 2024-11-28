@@ -6,7 +6,7 @@ const router = express.Router();
 const User = require('../models/User');
 
 // Example protected route to fetch all users registered for the authenticated user
-router.get('/all/:id', auth, async (req, res) => {
+router.get('/all', auth, async (req, res) => {
   try {
     const loggedIn = req.user._id;
     const allusers = await User.find({ _id: {$ne: loggedIn} }).select('-password');
