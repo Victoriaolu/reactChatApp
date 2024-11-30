@@ -8,10 +8,6 @@ import { useAuthContext } from './AuthContext';
 const Home = () => {
   const date =  new Date().getFullYear()
   const [messages, setMessages] = useState('');
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setMessages({ ...messages, [name]: value });
-  }
   const { select, authUser } = useAuthContext()
   // State for holding messages and current message
 
@@ -35,8 +31,8 @@ const Home = () => {
                   </div>
                   <div>
                     <input type='text' className='sendmsg'
-                    placeholder='Type a message' value="" 
-                    onChange={handleChange}
+                    placeholder='Type a message' value={messages} 
+                    onChange={(e) => setMessages(e.target.value)}
                     />
                     <button  className='sndbutton'> Send </button>
                   </div>
