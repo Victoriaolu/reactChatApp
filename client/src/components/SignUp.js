@@ -12,16 +12,12 @@ const Register = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, username, password, bio })
       });
-     if (sendUser) {
       const user = await sendUser.json();
       if (user.error) {
         throw new Error(user.error);
       }
-      console.log(user.newUser);
+      console.log(user.message);
       toast.success(user.message);
-     } else {
-        throw new Error('Failed to fetch data from server');
-     }
     } catch(error) {
       toast.error(error.message)
     } finally {

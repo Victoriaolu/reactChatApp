@@ -9,7 +9,8 @@ color: #302480;
 }
 
 .navbuttom{
-margin-top: 50px;;
+margin-top: 100px;
+margin-left: 5px;;
 }
 
 .imgholda {
@@ -75,6 +76,16 @@ object-fit: fill;
 border: 2px solid #cfb8cf;
 }
 
+.profpics {
+width: 65px;
+height: 65px;
+border-radius: 50%;
+background-color: no-color;
+object-fit: fill;
+display:flex;
+border: 2px solid #cfb8cf;
+}
+
 .divider {
 background-color: #cfb8cf;
 width: 100%;
@@ -89,11 +100,22 @@ background-color: no-color;
 height: 110px;
 border-radius: 9px;
 display: column;
-margin-top: 10px;
+margin-top: 5px;
+}
+
+.onlineref1 {
+background-color: #aa77aa;
+display:flex;
+border-radius: 15px;
+}
+
+.onlineref:hover {
+background-color: #302580;
 }
 
 .onlineref {
-display: flex;;
+display: flex;
+border-radius: 15px;
 }
 
 
@@ -277,6 +299,17 @@ text-size: 50px;
 font-size: 45px;
 }
 
+.username {
+width: 30%;
+color: #cfb8cf;
+text-size: 30px;
+font-size:30px;
+font-weight: bold;
+margin-top: 20px;
+margin-left: 150px;
+display: flex;
+}
+
 .msgload {
 background-color: no-color;
 height: 60px;
@@ -361,7 +394,7 @@ text-decoration: none;
 
 .formhold {
 display: flex;
-margin-left: 8%;
+margin-left: 1%;
 width: 100%;
 }
 
@@ -400,13 +433,13 @@ color: white;
 text-decoration: none;
 }
 
-link1.hover {
+link1:hover {
 color: #aaaaff;
 }
 
 .submit {
 height: 35px;
-width: 15%;
+width: 19%;
 opacity: 0.9;
 margin-top: 2px;
 color: #802080;

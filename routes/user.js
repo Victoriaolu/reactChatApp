@@ -11,7 +11,9 @@ const router = express.Router();
 
 // Set up storage for uploaded files (profile pictures)
 const storage = multer.diskStorage({
-    destination: './profilePic',
+    destination: (req, file, cb) => {
+      cb(null, 'profilePic');
+    },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.fieldname}-${path.extname(file.originalname)}`); // Append timestamp to filename
     },
@@ -43,9 +45,8 @@ router.put('/profile/:id', Auth, upload.single('profilePicture'), async (req, re
   }  else {
     const { id } = req.params;
     const { username, password, bio } = req.body;
-    const profilePicture = req.file ? req.file.path : req.body.profilePicture; // Get uploaded file path
-    console.log(profilePicture);
-const hashedPassword = await bcrypt.hash(password, 12);
+    const profilePicture = req.file ? `${req.file.filename}` : req.body.profilePicture; // Get uploaded file path
+    const hashedPassword = await bcrypt.hash(password, 12);
     const newUpdate = { username, password: hashedPassword, bio, profilePicture, _id: id }
 
      if (!mongose.Types.ObjectId.isValid(id)) {

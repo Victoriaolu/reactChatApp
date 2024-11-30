@@ -1,6 +1,7 @@
 import React from 'react';
 import LogOut from './logOut';
 import { CiLogout } from "react-icons/ci";
+import { useAuthContext } from './AuthContext';
 
 const NavBar = () => {
   const { logoutfxn } = LogOut()
@@ -8,22 +9,22 @@ const NavBar = () => {
     logoutfxn();
     window.location.href='/login';
   };
-  
-  return(
+  const { authUser } = useAuthContext()
+  return (
     <div>
-     <div className='navbar2'>
-       <div className='imgcontx'>
+      <div className='navbar2'>
+        <div>
           <div className='navbuttom'>
-            <div className='logoutpics'>
-               <p>pics</p>        
+            <div className='profpics'>
+               <img src={'http://localhost:5000/'+ authUser.user.profilePicture } alt='img' className='imgholda' />        
             </div>
          </div>
-          <div className='navbuttom'>
+        <div className='navbuttom'>
           <div onClick={handleLogout} className='iconbuttom'>
-            < CiLogout className='imgcontx' />
+            < CiLogout className='imgcontx' /> 
           </div>
-          </div>
-       </div>
+        </div>
+      </div>
     </div>
   </div>
   );

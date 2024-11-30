@@ -14,7 +14,10 @@ const Registration = () => {
   const { loading, signup } = Register()
   const handleSubmit = async(e) => {
     e.preventDefault();
-    await signup(formData);
+    const reg = await signup(formData);
+    if (!reg) {
+      window.location.reload()
+    }
     window.location.href='/login';
   };
 
