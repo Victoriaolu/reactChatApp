@@ -9,7 +9,8 @@ const NavBar = () => {
     logoutfxn();
     window.location.href='/login';
   };
-  const { authUser } = useAuthContext()
+  const { authUser, setAuthUser } = useAuthContext()
+  if (!authUser) { setAuthUser(null) }
   return (
     <div>
       <div className='navbar2'>

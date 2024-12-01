@@ -1,15 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
 import FetchUsers from './fetchAllUsers';
 import { useAuthContext } from './AuthContext';
 
 const Sidebar = () => {
-  const { select, setSelect} = useAuthContext()
-  const { loading, allusers } =  FetchUsers();
-  var selected;
-  const users = Object.values(allusers).find((select) => {selected = true});
-  console.log(selected);
-  console.log(select)
+  const { setSelect , authUser} = useAuthContext()
+  const { loading, allusers } =  FetchUsers()
+
+  if (!authUser) { window.location.href='./login '}
   return (
     <div className='Online'>
       <div className='contdiv'>
@@ -17,7 +14,7 @@ const Sidebar = () => {
          <div key={user._id} className='onlinecont'>
            <div className='onlineref' onClick={()=>setSelect(user)}>
               <div className='pichold'>
-                <img src={'http://127.0.0.1:5000/' + user.profilePicture} className='imgholda' />
+                <img src={'http://127.0.0.1:5000/' + user.profilePicture} className='imgholda' alt='img' />
               </div>
               <div className='Userdisp'>
                 {user.username} 

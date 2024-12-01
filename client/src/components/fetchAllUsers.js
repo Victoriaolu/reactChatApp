@@ -1,20 +1,31 @@
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useAuthContext } from './AuthContext';
+import TokenExp from './TokenExp';
+
 
 const FetchUsers = () => {
   const [loading, setLoading] = useState(false);
   const [allusers, setAllusers]  = useState([]);
+  const { authUser, setAuthUser } = useAuthContext()
 
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
       try {
-        const { token } = await  JSON.parse(localStorage.getItem('authorized'));
+        const token = authUser.token
+        if (token) {
+          const Expire = TokenExp(token);
+          if (Expire) {
+            localStorage.removeItem('authorized')
+            setAuthUser(null);
+            toast.error('Session time out, please login to continue');
+          }
+        }
         const comm = await fetch('http://localhost:5000/api/chat/all', {
           headers: {"Authorization": `Bearer ${token}` }
         });
         const resp = await comm.json();
-        console.log(resp);
         if (resp.error) {
           throw new Error(resp.error);
         }
@@ -26,7 +37,7 @@ const FetchUsers = () => {
       }
     }
     fetchUser();
-  },[]);
+  },[authUser, setAuthUser]);
   return { loading, allusers }
 }
 

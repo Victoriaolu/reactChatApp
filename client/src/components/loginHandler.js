@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useAuthContext } from './AuthContext';
 
+
 const LoggerAction = () => {
+
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext()
+
   const logger = async ({ username, password }) => {
     try {
       setLoading(true);

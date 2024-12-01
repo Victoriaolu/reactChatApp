@@ -1,13 +1,11 @@
 import React from 'react';
 import logo from '../logochat.png';
-import { Link } from 'react-router-dom';
+import { Link , Navigate} from 'react-router-dom';
 import { useAuthContext } from './AuthContext';
 
 const Navbar = () => {
-  const { authUser } = useAuthContext();
-  if (!authUser) { return; }
+  const { authUser } = useAuthContext()
   const username = authUser.user.username;
-  console.log(username);
   
   return(
     <div>

@@ -4,7 +4,7 @@ import LoggerAction from './loginHandler';
 import { Link } from 'react-router-dom';
 
 
-const Login = () => {
+const Login = () => { 
   const [loginData, setLoginData] = useState({ username: '', password: '' });
   const handleChange = (e) => {
     const { name, value } = e.target;

@@ -110,7 +110,7 @@ border-radius: 15px;
 }
 
 .onlineref:hover {
-background-color: #302580;
+background-color: #302560;
 }
 
 .onlineref {
@@ -166,7 +166,11 @@ color: #302080;
 border-radius: 19px;
 opacity: 0.76;
 }
-
+.ptext {
+font-size: 30px;
+font-weight: bold;
+color: #cfb8cf;
+}
 .ptxtindex {
 font-size: 30px;
 padding: 10px;
@@ -225,8 +229,8 @@ height: 73px;
 }
 
 .messagediv {
-height: 450px;
-width: 95%;
+height: 490px;
+width: 80%;
 margin: auto;
 margin-top: 40px;
 border-radius: 25px;
@@ -241,7 +245,7 @@ width:90%;
 border: none;
 background-color: #251550;
 margin: auto;
-margin-top:10px;
+margin-top:20px;
 border-radius: 20px;
 overflow: auto;
 }

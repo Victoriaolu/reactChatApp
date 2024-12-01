@@ -16,8 +16,8 @@ const Register = () => {
       if (user.error) {
         throw new Error(user.error);
       }
-      console.log(user.message);
-      toast.success(user.message);
+      console.log(user);
+      toast.success(user);
     } catch(error) {
       toast.error(error.message)
     } finally {
